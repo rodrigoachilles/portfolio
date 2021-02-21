@@ -24,23 +24,34 @@ const typographyVariants = {
   // [pageTitle]
   pageTitleXS: {
     fontSize: '36px',
-    fontWeight: '300',
+    fontWeight: 'normal',
     lineHeight: 1, // 100%
   },
   pageTitle: {
     fontSize: '60px',
-    fontWeight: '300',
+    fontWeight: 'normal',
+    lineHeight: 1.25, // 125%
+  },
+  // [cardTitle]
+  cardTitleXS: {
+    fontSize: '18px',
+    fontWeight: 'normal',
+    lineHeight: 1, // 100%
+  },
+  cardTitle: {
+    fontSize: '32px',
+    fontWeight: 'normal',
     lineHeight: 1.25, // 125%
   },
   // [logoText]
   logoTextXS: {
     fontSize: '18px',
-    fontWeight: '300',
+    fontWeight: 'normal',
     lineHeight: 1, // 100%
   },
   logoText: {
     fontSize: '38px',
-    fontWeight: '300',
+    fontWeight: 'normal',
     lineHeight: 1.25, // 125%
   },
   // [paragraph]

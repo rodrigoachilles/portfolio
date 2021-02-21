@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import Logo from '../../theme/Logo';
-import Grid from '../foundation/layout/Grid';
+import Logo from '../../../theme/Logo';
+import Grid from '../../foundation/layout/Grid';
 import NavBar from '../NavBar';
 
 const HeaderWrapper = styled.nav`
   display:"flex";
   flex:"1";
-  flex-wrap:"nowrap";
   flex-direction:"row";
-  justify-content:"center";
+  justify-content:"space-around";
   background: ${({ theme }) => theme.colors.secondary.main.color};
+  border-top: 2px solid ${({ theme }) => theme.colors.primary.main.color};
 `;
 
 export default function Header(props) {

@@ -56,6 +56,23 @@ const pageTitle = css`
   })}
 `;
 
+const cardTitle = css`
+  ${({ theme }) => css`
+    font-size: ${theme.typographyVariants.cardTitleXS.fontSize};
+    font-weight: ${theme.typographyVariants.cardTitleXS.fontWeight};
+    line-height: ${theme.typographyVariants.cardTitleXS.lineHeight};
+  `}
+  ${breakpointsMedia({
+    md: css`
+      ${({ theme }) => css`
+        font-size: ${theme.typographyVariants.cardTitle.fontSize};
+        font-weight: ${theme.typographyVariants.cardTitle.fontWeight};
+        line-height: ${theme.typographyVariants.cardTitle.lineHeight};
+      `}
+    `,
+  })}
+`;
+
 const logoText = css`
   ${({ theme }) => css`
     font-size: ${theme.typographyVariants.logoTextXS.fontSize};
@@ -94,6 +111,7 @@ export const TextStyleVariants = {
   title,
   subTitle,
   pageTitle,
+  cardTitle,
   logoText,
   paragraph,
 };
@@ -104,8 +122,6 @@ const TextBase = styled.span`
   
   ${propToStyle('textAlign')}
   ${propToStyle('textTransform')}
-  ${propToStyle('marginTop')}
-  ${propToStyle('marginBottom')}
 `;
 
 export function Text({
@@ -134,5 +150,5 @@ Text.defaultProps = {
 Text.propTypes = {
   children: PropTypes.node.isRequired,
   tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span']),
-  variant: PropTypes.oneOf(['title', 'subTitle', 'pageTitle', 'logoText', 'paragraph']),
+  variant: PropTypes.oneOf(['title', 'subTitle', 'pageTitle', 'cardTitle', 'logoText', 'paragraph']),
 };

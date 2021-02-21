@@ -1,8 +1,8 @@
 import get from 'lodash/get';
 import styled, { css } from 'styled-components';
-import breakpointsMedia from '../../theme/utils/breakpointsMedia';
-import propToStyle from '../../theme/utils/propToStyle';
-import { TextStyleVariants } from '../foundation/Text';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
+import propToStyle from '../../../theme/utils/propToStyle';
+import { TextStyleVariants } from '../Text';
 
 const ButtonGhost = css`
   color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
@@ -17,13 +17,13 @@ const ButtonDefault = css`
 const Button = styled.button` 
   border: 0;
   cursor: pointer;
-  padding: 12px 26px;
-  font-weight: bold;
+  font-weight: normal;
   opacity: 1;
   border-radius: 8px;
 
   ${breakpointsMedia({
     xs: css`
+      padding: 12px 26px;
       ${TextStyleVariants.paragraphXS}
     `,
     md: css`

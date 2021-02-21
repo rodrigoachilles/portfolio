@@ -13,12 +13,12 @@ export default function Logo(props) {
     // eslint-disable-next-line react/jsx-props-no-spreading
     <LogoWrapper {...props}>
       <Text
-        variant="LogoText"
+        variant="logoText"
         tag="h1"
         color="tertiary.light"
         textAlign="center"
       >
-        &lt; RAP /&gt;
+        &lt;RAP/&gt;
       </Text>
     </LogoWrapper>
   );

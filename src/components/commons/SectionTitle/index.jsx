@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from '../foundation/Text';
+import { Text } from '../../foundation/Text';
 
 export default function SectionTitle() {
   return (
