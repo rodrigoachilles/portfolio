@@ -35,12 +35,12 @@ const typographyVariants = {
   // [cardTitle]
   cardTitleXS: {
     fontSize: '18px',
-    fontWeight: 'normal',
+    fontWeight: 'bold',
     lineHeight: 1, // 100%
   },
   cardTitle: {
     fontSize: '32px',
-    fontWeight: 'normal',
+    fontWeight: 'bold',
     lineHeight: 1.25, // 125%
   },
   // [logoText]

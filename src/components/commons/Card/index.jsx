@@ -70,7 +70,8 @@ const TextWrapper = styled.div`
     ${breakpointsMedia({
     lg: css`
         width: 30%;
-        margin: auto 30px;
+        /* topo | direita | inferior | esquerda */
+        margin: 1em 1em 0 1em;
         h1 {
           text-align: left;
         }
