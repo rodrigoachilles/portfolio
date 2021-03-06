@@ -17,6 +17,7 @@ const ProjectWrapper = styled.main`
 export default function Projects() {
   const myProjects = [
     {
+      id: '1',
       header: 'Project Report',
       image: {
         url: 'images/project1.svg',
@@ -26,6 +27,7 @@ export default function Projects() {
       highlighted: true,
     },
     {
+      id: '2',
       header: 'Project Report',
       image: {
         url: 'images/project2.svg',
@@ -33,6 +35,7 @@ export default function Projects() {
       },
     },
     {
+      id: '3',
       header: 'Project Report',
       image: {
         url: 'images/project1.svg',
@@ -40,6 +43,7 @@ export default function Projects() {
       },
     },
     {
+      id: '4',
       header: 'Project Report',
       image: {
         url: 'images/project2.svg',
@@ -56,7 +60,7 @@ export default function Projects() {
           {myProjects.map((project) => (
             <Grid.Col
               value={{ xs: 12, md: 5, lg: project.highlighted ? 12 : 4 }}
-              order={project.highlighted}
+              key={project.id}
             >
               <Card
                 header={project.header}

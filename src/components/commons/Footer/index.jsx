@@ -11,21 +11,11 @@ const FooterWrapper = styled.footer`
   background: ${({ theme }) => theme.colors.secondary.main.color};
 `;
 
-// const FooterIconWrapper = styled.div`
-//   display:flex;
-//   flex:1;
-//   flex-wrap:wrap;
-//   flex-flow: center;
-//   flex-direction:row;
-//   justify-content:center;
-//   background: ${({ theme }) => theme.colors.primary.main.color};
-// `;
-
 const FooterIcon = styled.div`
-  padding-top: 18px;
-  padding-right: 24px;
-  padding-bottom: 18px;
-  padding-left: 24px;
+  padding-top: 9px;
+  padding-right: 12px;
+  padding-bottom: 9px;
+  padding-left: 12px;
   background-color: ${({ theme }) => theme.colors.primary.main.color};
 `;
 
@@ -39,8 +29,8 @@ export default function Footer(props) {
           <img
             alt="github"
             src="images/github.svg"
-            width="24px"
-            height="24px"
+            width="16px"
+            height="16px"
           />
         </a>
       </FooterIcon>
@@ -50,8 +40,8 @@ export default function Footer(props) {
           <img
             alt="twitter"
             src="images/twitter.svg"
-            width="24px"
-            height="24px"
+            width="16px"
+            height="16px"
           />
         </a>
       </FooterIcon>
@@ -61,8 +51,8 @@ export default function Footer(props) {
           <img
             alt="linkedin"
             src="images/linkedin.svg"
-            width="24px"
-            height="24px"
+            width="16px"
+            height="16px"
           />
         </a>
       </FooterIcon>

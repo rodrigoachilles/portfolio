@@ -100,10 +100,15 @@ export default function Card({
   );
 }
 
+Card.defaultProps = {
+  description: '',
+  highlighted: false,
+};
+
 Card.propTypes = {
   header: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   // eslint-disable-next-line react/forbid-prop-types
   image: PropTypes.object.isRequired,
-  highlighted: PropTypes.bool.isRequired,
+  highlighted: PropTypes.bool,
 };
