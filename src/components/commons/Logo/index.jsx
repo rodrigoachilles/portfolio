@@ -1,12 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Text } from '../../components/foundation/Text';
-
-const LogoWrapper = styled.div`
-  display: 'flex';
-  justify-content: 'center';
-  background-color: ${({ theme }) => theme.colors.primary.main.color};
-`;
+import Text from '../../foundation/Text';
+import LogoWrapper from './styles';
 
 export default function Logo(props) {
   return (
@@ -14,8 +8,8 @@ export default function Logo(props) {
     <LogoWrapper {...props}>
       <Text
         variant="logoText"
-        tag="h1"
-        color="tertiary.light"
+        tag="span"
+        color="primary.main.contrastText"
         textAlign="center"
       >
         &lt;RAP/&gt;

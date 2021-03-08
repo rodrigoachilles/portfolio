@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import breakpointsMedia from '../../../../theme/utils/breakpointsMedia';
-import propToStyle from '../../../../theme/utils/propToStyle';
+import breakpointsMedia from '../../../../utils/breakpointsMedia';
+import propToStyle from '../../../../utils/propToStyle';
 
 const Container = styled.div`
   width: 100%;
@@ -121,17 +121,17 @@ const Col = styled.div`
   ${propToStyle('flexDirection')}
 `;
 
+Col.defaultProps = {
+  value: {},
+  offset: {},
+};
+
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-right: -16px;
   margin-left: -16px;
 `;
-
-Col.defaultProps = {
-  value: {},
-  offset: {},
-};
 
 const Grid = {
   Container,
