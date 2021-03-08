@@ -1,67 +1,23 @@
 import React from 'react';
-import styled from 'styled-components';
 import Grid from '../../foundation/layout/Grid';
 import Card from '../Card';
 import SectionTitle from '../SectionTitle';
-
-const ProjectWrapper = styled.main`
-  width: 100%;
-  height: 300vh;
-  display: flex;
-  flex: 1;
-  flex: wrap;
-  flex-direction: column;
-  margin: 18px;
-`;
+import myProjects from './content';
+import ProjectWrapper from './styles';
 
 export default function Projects() {
-  const myProjects = [
-    {
-      id: '1',
-      header: 'Project Report',
-      image: {
-        url: 'images/project1.svg',
-        alt: 'Project1',
-      },
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie rhoncus vestibulum. Aenean blandit velit.',
-      highlighted: true,
-    },
-    {
-      id: '2',
-      header: 'Project Report',
-      image: {
-        url: 'images/project2.svg',
-        alt: 'Project2',
-      },
-    },
-    {
-      id: '3',
-      header: 'Project Report',
-      image: {
-        url: 'images/project1.svg',
-        alt: 'Project1',
-      },
-    },
-    {
-      id: '4',
-      header: 'Project Report',
-      image: {
-        url: 'images/project2.svg',
-        alt: 'Project2',
-      },
-    },
-  ];
-
   return (
     <ProjectWrapper>
       <SectionTitle />
-      <Grid.Container>
-        <Grid.Row justifyContent="space-between">
+      <Grid.Container
+        marginTop={{
+          xs: '32px',
+          md: '75px',
+        }}
+      >
+        <Grid.Row>
           {myProjects.map((project) => (
-            <Grid.Col
-              value={{ xs: 12, md: 5, lg: project.highlighted ? 12 : 4 }}
-              key={project.id}
-            >
+            <Grid.Col value={{ xs: 12, md: 6, lg: project.highlighted ? 12 : 4 }} key={project.id}>
               <Card
                 header={project.header}
                 description={project.description}
