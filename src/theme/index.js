@@ -84,6 +84,30 @@ const typographys = {
     lineHeight: 1.25, // 125%
   },
 
+  // [pageSubTitle]
+  pageSubTitleXS: {
+    fontSize: '14px',
+    fontWeight: 'normal',
+    lineHeight: 1, // 100%
+  },
+  pageSubTitle: {
+    fontSize: '25px',
+    fontWeight: 'normal',
+    lineHeight: 1, // 100%
+  },
+
+  // [modalTitle]
+  modalTitleXS: {
+    fontSize: '14px',
+    fontWeight: 'normal',
+    lineHeight: 1, // 100%
+  },
+  modalTitle: {
+    fontSize: '25px',
+    fontWeight: 'normal',
+    lineHeight: 1, // 100%
+  },
+
   // [cardTitle]
   cardTitleXS: {
     fontSize: '16px',
@@ -131,6 +155,18 @@ const typographys = {
     fontWeight: 'normal',
     lineHeight: 1, // 100%
   },
+
+  // [navBar]
+  buttonXS: {
+    fontSize: '16px',
+    fontWeight: 'bold',
+    lineHeight: 1, // 100%
+  },
+  button: {
+    fontSize: '20px',
+    fontWeight: 'bold',
+    lineHeight: 1.25, // 125%
+  },
 };
 
 const breakpoints = {
@@ -145,7 +181,6 @@ export default {
   colors,
   typographys,
   breakpoints,
-  borderRadius: '12px',
   transition: '200ms ease-in-out',
   fontFamily: '\'Fira Sans Condensed\', sans-serif',
 };

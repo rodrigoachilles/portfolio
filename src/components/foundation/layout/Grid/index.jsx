@@ -35,11 +35,6 @@ const Container = styled.div`
 `;
 
 const Col = styled.div`
-  padding-right: 16px;
-  padding-left: 16px;
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 100%;
   ${({ value }) => {
     if (typeof value === 'number') {
       return css`
@@ -115,10 +110,17 @@ const Col = styled.div`
     });
   }}
 
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+
   ${propToStyle('display')}
+  ${propToStyle('flex')}
   ${propToStyle('alignItems')}
   ${propToStyle('justifyContent')}
   ${propToStyle('flexDirection')}
+  ${propToStyle('paddingRight')}
+  ${propToStyle('paddingLeft')}
 `;
 
 Col.defaultProps = {
@@ -129,8 +131,13 @@ Col.defaultProps = {
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-right: -16px;
-  margin-left: -16px;
+  
+  ${propToStyle('flex')}
+  ${propToStyle('justifyContent')}
+  ${propToStyle('alignItems')}
+  ${propToStyle('marginRight')}
+  ${propToStyle('marginLeft')}
+  ${propToStyle('maxHeight')}
 `;
 
 const Grid = {

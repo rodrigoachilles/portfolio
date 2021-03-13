@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const CoverWrapper = styled.div`
+const CoverWrapper = styled.section`
   width: 100%;
   height: 100%;
   background-image: url('/images/background.jpg');

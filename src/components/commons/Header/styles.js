@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const HeaderWrapper = styled.nav`
+const HeaderWrapper = styled.header`
   display: flex;
   flex: 1;
   align-items: stretch;
@@ -18,7 +18,7 @@ HeaderWrapper.LeftSide = styled.div`
   justify-content: center;
 `;
 
-HeaderWrapper.RightSide = styled.div`
+HeaderWrapper.RightSide = styled.nav`
   display: flex;
   flex: 1;
   align-items: center;

@@ -1,7 +1,6 @@
 import get from 'lodash/get';
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../utils/breakpointsMedia';
-import propToStyle from '../../../utils/propToStyle';
 import { TextStyleVariants } from '../Text/styles';
 
 const ButtonGhost = css`
@@ -15,28 +14,29 @@ const ButtonDefault = css`
 `;
 
 const Button = styled.button` 
-  border: 0;
   cursor: pointer;
   font-weight: normal;
   opacity: 1;
-  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+  display: inline-block;
+  margin: 4px 2px;
+  border: 1px solid ${({ theme }) => theme.colors.borders.main.color};
+  border-radius: 50%;
+
+  ${TextStyleVariants.button}
 
   ${breakpointsMedia({
     xs: css`
-      padding: 12px 26px;
-      ${TextStyleVariants.paragraphXS}
+      padding: 5px 10px;
     `,
     md: css`
-      padding: 12px 43px;
-      ${TextStyleVariants.paragraph}
+      padding: 4px 12px;
     `,
   })}
 
-  ${propToStyle('margin')}
-  ${propToStyle('display')}
-  
   transition: opacity ${({ theme }) => theme.transition};
-  border-radius: ${({ theme }) => theme.borderRadius};
   ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
   &:hover,
   &:focus {

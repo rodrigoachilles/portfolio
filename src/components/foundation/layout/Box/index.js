@@ -8,11 +8,16 @@ const Box = styled.div`
     ${propToStyle('flexDirection')}
     ${propToStyle('flexGrow')}
     ${propToStyle('justifyContent')}
+    ${propToStyle('alignItems')}
+
     ${propToStyle('backgroundColor')}
     ${propToStyle('backgroundImage')}
     ${propToStyle('backgroundRepeat')}
     ${propToStyle('backgroundPosition')}
+
+    ${propToStyle('boxShadow')}
     ${propToStyle('padding')}
+    ${propToStyle('margin')}
 `;
 
 export default Box;

@@ -1,4 +1,5 @@
 import React from 'react';
+import Contact from '../components/commons/Contact';
 import Cover from '../components/commons/Cover';
 import Footer from '../components/commons/Footer';
 import Header from '../components/commons/Header';
@@ -10,6 +11,7 @@ export default function Home() {
       <Cover />
       <Header />
       <Projects />
+      <Contact />
       <Footer />
     </>
   );

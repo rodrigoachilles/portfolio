@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Text from '../../foundation/Text';
 
-export default function SectionTitle() {
+export default function SectionTitle({ title }) {
   return (
     <Text
       variant="pageTitle"
@@ -10,8 +11,12 @@ export default function SectionTitle() {
       textAlign="center"
       textTransform="uppercase"
     >
-      meus projetos
+      {title}
 
     </Text>
   );
 }
+
+SectionTitle.propTypes = {
+  title: PropTypes.string.isRequired,
+};
