@@ -23,10 +23,11 @@ export default function Text({
 Text.defaultProps = {
   tag: 'span',
   variant: 'paragraph',
+  children: null,
 };
 
 Text.propTypes = {
-  children: PropTypes.node.isRequired,
-  tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span']),
-  variant: PropTypes.oneOf(['title', 'subTitle', 'pageTitle', 'cardTitle', 'logoText', 'paragraph', 'navBar']),
+  children: PropTypes.node,
+  tag: PropTypes.string,
+  variant: PropTypes.string,
 };
