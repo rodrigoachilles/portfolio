@@ -193,8 +193,16 @@ const TextBase = styled.span`
   color: ${({ theme, color }) => get(theme, `colors.${color}`)};
   
   ${propToStyle('padding')}
+  ${propToStyle('cursor')}
   ${propToStyle('textAlign')}
   ${propToStyle('textTransform')}
+
+  ${(props) => props.link && css`
+    &:hover,
+    &:focus {
+      opacity: .5;
+    }
+  `}
 `;
 
 export default TextBase;

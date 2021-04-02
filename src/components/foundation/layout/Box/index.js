@@ -18,6 +18,9 @@ const Box = styled.div`
     ${propToStyle('boxShadow')}
     ${propToStyle('padding')}
     ${propToStyle('margin')}
+
+    ${propToStyle('width')}
+    ${propToStyle('height')}
 `;
 
 export default Box;

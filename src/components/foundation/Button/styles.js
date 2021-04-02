@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import get from 'lodash/get';
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../utils/breakpointsMedia';
@@ -13,7 +14,7 @@ const ButtonDefault = css`
   background-color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
 `;
 
-const Button = styled.button` 
+const ButtonWrapper = styled.button`
   cursor: pointer;
   font-weight: normal;
   opacity: 1;
@@ -36,12 +37,21 @@ const Button = styled.button`
     `,
   })}
 
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .2;
+  }
+  ${({ fullWidth }) => fullWidth && css`
+    width: 100%;
+  `};
+
   transition: opacity ${({ theme }) => theme.transition};
   ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
+  
   &:hover,
   &:focus {
     opacity: .5;
   }
 `;
 
-export default Button;
+export default ButtonWrapper;

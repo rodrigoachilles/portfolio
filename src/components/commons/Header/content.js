@@ -7,7 +7,7 @@ const itemsMenu = [
   {
     id: '2',
     name: 'Contato',
-    url: '/contact',
+    // url: '/contact',
   },
 ];
 

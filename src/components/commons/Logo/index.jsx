@@ -8,6 +8,7 @@ export default function Logo(props) {
     <LogoWrapper {...props}>
       <Text
         variant="logoText"
+        href="/"
         tag="span"
         color="primary.main.contrastText"
         textAlign="center"
