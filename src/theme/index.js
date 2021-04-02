@@ -129,7 +129,7 @@ const typographys = {
   logoText: {
     fontSize: '28px',
     fontWeight: 'normal',
-    lineHeight: 1.25, // 125%
+    lineHeight: 1, // 100%
   },
 
   // [paragraph]

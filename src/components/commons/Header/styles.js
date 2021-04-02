@@ -6,7 +6,6 @@ const HeaderWrapper = styled.header`
   align-items: stretch;
   justify-content: space-between;
   flex-wrap: wrap;
-
   border-top: 2px solid ${({ theme }) => theme.colors.borders.main.color};
   background-color: ${({ theme }) => theme.colors.secondary.main.color};
 `;
