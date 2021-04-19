@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const ProjectWrapper = styled.section`
   display: flex;
   flex: 1;
-  flex: wrap;
+  flex-wrap: wrap;
   flex-direction: column;
   margin: 18px;
 `;
