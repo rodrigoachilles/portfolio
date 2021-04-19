@@ -4,7 +4,8 @@ const ModalWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  background: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
   position: fixed;
   z-index: 1;
   top: 0;

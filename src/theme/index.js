@@ -110,12 +110,12 @@ const typographys = {
 
   // [cardTitle]
   cardTitleXS: {
-    fontSize: '16px',
+    fontSize: '14px',
     fontWeight: 'bold',
     lineHeight: 1, // 100%
   },
   cardTitle: {
-    fontSize: '24px',
+    fontSize: '22px',
     fontWeight: 'bold',
     lineHeight: 1.25, // 125%
   },
@@ -134,12 +134,12 @@ const typographys = {
 
   // [paragraph]
   paragraphXS: {
-    fontSize: '14px',
+    fontSize: '12px',
     fontWeight: 'normal',
     lineHeight: 1, // 100%
   },
   paragraph: {
-    fontSize: '18px',
+    fontSize: '16px',
     fontWeight: 'normal',
     lineHeight: 1, // 100%
   },
@@ -166,6 +166,42 @@ const typographys = {
     fontSize: '20px',
     fontWeight: 'bold',
     lineHeight: 1.25, // 125%
+  },
+
+  // [repositoryTitle]
+  repositoryTitleXS: {
+    fontSize: '14px',
+    fontWeight: 'bold',
+    lineHeight: 1, // 100%
+  },
+  repositoryTitle: {
+    fontSize: '18px',
+    fontWeight: 'bold',
+    lineHeight: 1.25, // 125%
+  },
+
+  // [repositorySubTitle]
+  repositorySubTitleXS: {
+    fontSize: '12px',
+    fontWeight: 'bold',
+    lineHeight: 1, // 100%
+  },
+  repositorySubTitle: {
+    fontSize: '16px',
+    fontWeight: 'bold',
+    lineHeight: 1.25, // 125%
+  },
+
+  // [repositoryParagraph]
+  repositoryParagraphXS: {
+    fontSize: '12px',
+    fontWeight: 'normal',
+    lineHeight: 1, // 100%
+  },
+  repositoryParagraph: {
+    fontSize: '14px',
+    fontWeight: 'normal',
+    lineHeight: 1, // 100%
   },
 };
 
