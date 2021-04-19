@@ -18,6 +18,7 @@ export default function WebsitePageWrapper({
   seoProps,
   coverProps,
   headerProps,
+  bodyProps,
 }) {
   const [isModalOpen, setModalState] = useState(false);
 
@@ -32,31 +33,6 @@ export default function WebsitePageWrapper({
       <SEO
         {...seoProps}
       />
-
-      {/* <Box
-        display="flex"
-        flex="1"
-        flexDirection="column"
-        {...pageBoxProps}
-      >
-        <Modal
-          isOpen={isModalOpen}
-          onClose={() => {
-            setModalState(false);
-          }}
-        >
-          {(propsDoModal) => (
-            <FormCadastro propsDoModal={propsDoModal} />
-          )}
-        </Modal>
-        {menuProps.display && (
-          <Menu
-            onCadastrarClick={() => setModalState(true)}
-          />
-        )}
-        {children}
-        <Footer />
-      </Box> */}
 
       {coverProps.display && (<Cover />)}
 
@@ -75,9 +51,11 @@ export default function WebsitePageWrapper({
       </Modal>
 
       <Box
+        as="main"
         display="flex"
         flex="1"
         flexDirection="column"
+        {...bodyProps}
       >
 
         {children}
@@ -97,6 +75,7 @@ WebsitePageWrapper.defaultProps = {
   headerProps: {
     display: true,
   },
+  bodyProps: {},
 };
 
 WebsitePageWrapper.propTypes = {
@@ -108,6 +87,12 @@ WebsitePageWrapper.propTypes = {
   }),
   headerProps: PropTypes.shape({
     display: PropTypes.bool,
+  }),
+  bodyProps: PropTypes.shape({
+    justifyContent: PropTypes.string,
+    alignItems: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string,
   }),
   children: PropTypes.node.isRequired,
 };

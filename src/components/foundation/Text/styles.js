@@ -175,6 +175,57 @@ const button = css`
   })}
 `;
 
+const repositoryTitle = css`
+  ${({ theme }) => css`
+    font-size: ${theme.typographys.repositoryTitleXS.fontSize};
+    font-weight: ${theme.typographys.repositoryTitleXS.fontWeight};
+    line-height: ${theme.typographys.repositoryTitleXS.lineHeight};
+  `}
+  ${breakpointsMedia({
+    md: css`
+      ${({ theme }) => css`
+        font-size: ${theme.typographys.repositoryTitle.fontSize};
+        font-weight: ${theme.typographys.repositoryTitle.fontWeight};
+        line-height: ${theme.typographys.repositoryTitle.lineHeight};
+      `}
+    `,
+  })}
+`;
+
+const repositorySubTitle = css`
+  ${({ theme }) => css`
+    font-size: ${theme.typographys.repositorySubTitleXS.fontSize};
+    font-weight: ${theme.typographys.repositorySubTitleXS.fontWeight};
+    line-height: ${theme.typographys.repositorySubTitleXS.lineHeight};
+  `}
+  ${breakpointsMedia({
+    md: css`
+      ${({ theme }) => css`
+        font-size: ${theme.typographys.repositorySubTitle.fontSize};
+        font-weight: ${theme.typographys.repositorySubTitle.fontWeight};
+        line-height: ${theme.typographys.repositorySubTitle.lineHeight};
+      `}
+    `,
+  })}
+`;
+
+const repositoryParagraph = css`
+  ${({ theme }) => css`
+    font-size: ${theme.typographys.repositoryParagraphXS.fontSize};
+    font-weight: ${theme.typographys.repositoryParagraphXS.fontWeight};
+    line-height: ${theme.typographys.repositoryParagraphXS.lineHeight};
+  `}
+  ${breakpointsMedia({
+    md: css`
+      ${({ theme }) => css`
+        font-size: ${theme.typographys.repositoryParagraph.fontSize};
+        font-weight: ${theme.typographys.repositoryParagraph.fontWeight};
+        line-height: ${theme.typographys.repositoryParagraph.lineHeight};
+      `}
+    `,
+  })}
+`;
+
 export const TextStyleVariants = {
   title,
   subTitle,
@@ -186,6 +237,9 @@ export const TextStyleVariants = {
   paragraph,
   navBar,
   button,
+  repositoryTitle,
+  repositorySubTitle,
+  repositoryParagraph,
 };
 
 const TextBase = styled.span`
@@ -193,6 +247,7 @@ const TextBase = styled.span`
   color: ${({ theme, color }) => get(theme, `colors.${color}`)};
   
   ${propToStyle('padding')}
+  ${propToStyle('paddingLeft')}
   ${propToStyle('cursor')}
   ${propToStyle('textAlign')}
   ${propToStyle('textTransform')}

@@ -1,12 +1,26 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ContactArea from '../../commons/ContactArea';
 import Projects from '../../commons/Projects';
 
-export default function HomeScreen() {
+export default function HomeScreen({ projects }) {
   return (
     <>
-      <Projects />
+      <Projects projects={projects} />
       <ContactArea />
     </>
   );
 }
+
+HomeScreen.propTypes = {
+  projects: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    header: PropTypes.string,
+    image: PropTypes.shape({
+      url: PropTypes.string,
+      alt: PropTypes.string,
+    }),
+    description: PropTypes.string,
+    highlighted: PropTypes.bool,
+  })).isRequired,
+};

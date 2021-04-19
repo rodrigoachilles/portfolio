@@ -9,7 +9,10 @@ export default function Card({
   return (
     <CardWrapper highlighted={highlighted}>
       <CardWrapper.Header highlighted={highlighted}>
-        <img src={image.url} alt={image.alt} />
+        <img
+          src={image.url}
+          alt={image.alt}
+        />
       </CardWrapper.Header>
 
       <CardWrapper.Text highlighted={highlighted}>
@@ -42,7 +45,9 @@ Card.defaultProps = {
 Card.propTypes = {
   header: PropTypes.string.isRequired,
   description: PropTypes.string,
-  // eslint-disable-next-line react/forbid-prop-types
-  image: PropTypes.object.isRequired,
+  image: PropTypes.shape({
+    url: PropTypes.string,
+    alt: PropTypes.string,
+  }).isRequired,
   highlighted: PropTypes.bool,
 };

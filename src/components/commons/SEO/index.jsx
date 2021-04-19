@@ -10,7 +10,7 @@ export default function SEO({ headTitle }) {
     : baseTitle;
 
   const description = 'Site pessoal do desenvolvedor Full Stack Rodrigo Achilles Pereira. Desenvolvido para mostrar os projetos construídos ao longo de sua trajetória como programador.';
-  const image = 'https://rodrigo-achilles.vercel.app/images/portfolio-share.png';
+  const image = 'https://rodrigo-achilles.vercel.app/images/portfolio-share.jpg';
   const urlBase = 'https://rodrigo-achilles.vercel.app/';
 
   return (
