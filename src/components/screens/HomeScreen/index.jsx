@@ -14,13 +14,14 @@ export default function HomeScreen({ projects }) {
 
 HomeScreen.propTypes = {
   projects: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string,
     header: PropTypes.string,
     image: PropTypes.shape({
       url: PropTypes.string,
       alt: PropTypes.string,
     }),
     description: PropTypes.string,
+    website: PropTypes.string,
     highlighted: PropTypes.bool,
   })).isRequired,
 };

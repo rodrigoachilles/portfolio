@@ -18,6 +18,7 @@ export default function Repositories({ repositories }) {
           flexDirection="column"
           flexWrap="nowrap"
           padding="5px"
+          key={repository.id}
         >
           <Text
             tag="h1"

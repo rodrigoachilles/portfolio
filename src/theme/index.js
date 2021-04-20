@@ -203,6 +203,18 @@ const typographys = {
     fontWeight: 'normal',
     lineHeight: 1, // 100%
   },
+
+  // [descriptionSubTitle]
+  descriptionSubTitleXS: {
+    fontSize: '12px',
+    fontWeight: 'bold',
+    lineHeight: 1, // 100%
+  },
+  descriptionSubTitle: {
+    fontSize: '16px',
+    fontWeight: 'bold',
+    lineHeight: 1.25, // 125%
+  },
 };
 
 const breakpoints = {
