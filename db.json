@@ -1,41 +1,45 @@
 {
   "projects": [
     {
-      "id": 1,
+      "id": "1",
       "header": "Project Report",
       "image": {
         "url": "/images/project1.svg",
         "alt": "Project1"
       },
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie rhoncus vestibulum. Aenean blandit velit.",
+      "website": "https://www.google.com",
       "highlighted": true
     },
     {
-      "id": 2,
+      "id": "2",
       "header": "Project Report",
       "image": {
         "url": "/images/project2.svg",
         "alt": "Project2"
       },
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie rhoncus vestibulum. Aenean blandit velit."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie rhoncus vestibulum. Aenean blandit velit.",
+      "website": "https://www.google.com"
     },
     {
-      "id": 3,
+      "id": "3",
       "header": "Project Report",
       "image": {
         "url": "/images/project1.svg",
         "alt": "Project1"
       },
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie rhoncus vestibulum. Aenean blandit velit."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie rhoncus vestibulum. Aenean blandit velit.",
+      "website": "https://www.google.com"
     },
     {
-      "id": 4,
+      "id": "4",
       "header": "Project Report",
       "image": {
         "url": "/images/project2.svg",
         "alt": "Project2"
       },
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie rhoncus vestibulum. Aenean blandit velit."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie rhoncus vestibulum. Aenean blandit velit.",
+      "website": "https://www.google.com"
     }
   ]
 }

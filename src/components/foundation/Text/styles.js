@@ -226,6 +226,23 @@ const repositoryParagraph = css`
   })}
 `;
 
+const descriptionSubTitle = css`
+  ${({ theme }) => css`
+    font-size: ${theme.typographys.descriptionSubTitleXS.fontSize};
+    font-weight: ${theme.typographys.descriptionSubTitleXS.fontWeight};
+    line-height: ${theme.typographys.descriptionSubTitleXS.lineHeight};
+  `}
+  ${breakpointsMedia({
+    md: css`
+      ${({ theme }) => css`
+        font-size: ${theme.typographys.descriptionSubTitle.fontSize};
+        font-weight: ${theme.typographys.descriptionSubTitle.fontWeight};
+        line-height: ${theme.typographys.descriptionSubTitle.lineHeight};
+      `}
+    `,
+  })}
+`;
+
 export const TextStyleVariants = {
   title,
   subTitle,
@@ -240,6 +257,7 @@ export const TextStyleVariants = {
   repositoryTitle,
   repositorySubTitle,
   repositoryParagraph,
+  descriptionSubTitle,
 };
 
 const TextBase = styled.span`

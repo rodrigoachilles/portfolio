@@ -1,10 +1,11 @@
 import AboutScreen from '../components/screens/AboutScreen';
 import websitePageHOC from '../components/wrappers/WebsitePage/hoc';
+import { urlApiGithub } from '../config';
 
 export default websitePageHOC(AboutScreen, {
   pageWrapperProps: {
     seoProps: {
-      headTitle: 'About',
+      headTitle: 'Sobre mim',
     },
   },
 });
@@ -12,7 +13,7 @@ export default websitePageHOC(AboutScreen, {
 export async function getStaticProps() {
   const week = 60 * 60 * 24 * 7;
 
-  const repositoriesGit = await fetch('https://api.github.com/users/rodrigoachilles/repos')
+  const repositoriesGit = await fetch(`${urlApiGithub}/users/rodrigoachilles/repos`)
     .then((response) => response.json());
 
   const repositories = repositoriesGit
