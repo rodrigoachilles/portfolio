@@ -40,38 +40,40 @@ export default function FormContent({ onClose }) {
   || userInfo.message.length === 0;
 
   return (
-    <form onSubmit={(event) => {
-      event.preventDefault();
+    <form
+      id="formContact"
+      onSubmit={(event) => {
+        event.preventDefault();
 
-      setSubmissionStatus(formStates.LOADING);
-      setIsFormSubmited(true);
+        setSubmissionStatus(formStates.LOADING);
+        setIsFormSubmited(true);
 
-      // setTimeout(() => {
-      fetch('https://contact-form-api-jamstack.herokuapp.com/messag', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userInfo),
-      }).then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
+        // setTimeout(() => {
+        fetch('https://contact-form-api-jamstack.herokuapp.com/messag', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userInfo),
+        }).then((response) => {
+          if (response.ok) {
+            return response.json();
+          }
 
-        throw new Error('Não foi possível cadastrar o usuário agora :(');
-      }).then(() => {
-        setSubmissionStatus(formStates.DONE);
+          throw new Error('Não foi possível cadastrar o usuário agora :(');
+        }).then(() => {
+          setSubmissionStatus(formStates.DONE);
 
-        setUserInfo({
-          name: '',
-          email: '',
-          message: '',
+          setUserInfo({
+            name: '',
+            email: '',
+            message: '',
+          });
+        }).catch(() => {
+          setSubmissionStatus(formStates.ERROR);
         });
-      }).catch(() => {
-        setSubmissionStatus(formStates.ERROR);
-      });
-      // }, 100000);
-    }}
+        // }, 100000);
+      }}
     >
       <Grid.Row
         margin="0"
@@ -123,7 +125,7 @@ export default function FormContent({ onClose }) {
             flexDirection="column"
             justifyContent="center"
           >
-            <p>Mensagem enviada com sucesso!</p>
+            <p id="successMessage">Mensagem enviada com sucesso!</p>
           </Box>
         </Box>
       )}
@@ -144,7 +146,7 @@ export default function FormContent({ onClose }) {
             flexDirection="column"
             justifyContent="center"
           >
-            <p>Erro ao enviar a mensagem. Por favor, tente mais tarde! :(</p>
+            <p id="failMessage">>Erro ao enviar a mensagem. Por favor, tente mais tarde! :(</p>
           </Box>
         </Box>
       )}
