@@ -1,3 +1,4 @@
+/* eslint-disable jest/expect-expect */
 /// <reference types="cypress" />
 
 import ContactFormPageObject from '../../../src/components/screens/HomeScreen/ContactForm.pageObject';
@@ -31,7 +32,7 @@ describe('/pages/index', () => {
     });
 
     describe('quando preencher os campos do form de contato', () => {
-      it.skip('e der sucesso', () => {
+      it('e der sucesso', () => {
         const contactForm = new ContactFormPageObject(cy);
 
         cy.intercept('https://contact-form-api-jamstack.herokuapp.com/message')
@@ -46,21 +47,21 @@ describe('/pages/index', () => {
           })
           .submitForm();
 
-        cy.wait('@submitForm')
+        return cy.wait('@submitForm')
           .then(() => {
             cy.get('p[id="successMessage"]').should('exist');
           });
       });
-      it('e der erro', () => {
+      it.skip('e der erro', () => {
         const contactForm = new ContactFormPageObject(cy);
 
-        cy.intercept('https://contact-form-api-jamstack.herokuapp.com/messag')
+        cy.intercept('https://contact-form-api-jamstack.herokuapp.com/message')
           .as('submitForm');
 
         contactForm.openModal();
 
         contactForm.fillForm({
-          name: 'Rodrigo',
+          name: '',
           email: 'rodrigo.achilles@gmail.com',
           message: 'Teste do cypress',
         }).submitForm();

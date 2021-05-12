@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import Text from '../../foundation/Text';
 import Input, { InputWrapper } from './styles';
 
 export default function TextField({
@@ -8,7 +9,12 @@ export default function TextField({
   name,
   onChange,
   value,
+  error,
+  isTouched,
 }) {
+  const hasError = Boolean(error);
+  const isFieldInvalid = hasError && isTouched;
+  
   return (
     <InputWrapper>
       <Input
@@ -18,12 +24,24 @@ export default function TextField({
         onChange={onChange}
         value={value}
       />
+      
+      {isFieldInvalid && (
+        <Text
+          variant="smallestException"
+          color="error.main"
+          role="alert"
+        >
+          {error}
+        </Text>
+      )}
     </InputWrapper>
   );
 }
 
 TextField.defaultProps = {
   type: 'text',
+  error: '',
+  isTouched: false,
 };
 
 TextField.propTypes = {
@@ -32,4 +50,6 @@ TextField.propTypes = {
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
+  error: PropTypes.string,
+  isTouched: PropTypes.bool,
 };
