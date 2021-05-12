@@ -49,7 +49,7 @@ export default function FormContent({ onClose }) {
         setIsFormSubmited(true);
 
         // setTimeout(() => {
-        fetch('https://contact-form-api-jamstack.herokuapp.com/messag', {
+        fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

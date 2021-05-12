@@ -42,6 +42,19 @@ const colors = {
       contrastText: '#434343',
     },
   },
+  // Feedback colors
+  error: {
+    main: {
+      color: '#dc3545',
+      contrastText: '#fff',
+    },
+  },
+  success: {
+    main: {
+      color: '#28a745',
+      contrastText: '#fff',
+    },
+  },
   modes: {
     dark: {},
   },
@@ -213,6 +226,18 @@ const typographys = {
   descriptionSubTitle: {
     fontSize: '16px',
     fontWeight: 'bold',
+    lineHeight: 1.25, // 125%
+  },
+
+  // [smallestException]
+  smallestExceptionXS: {
+    fontSize: '9px',
+    fontWeight: '400',
+    lineHeight: 1, // 100%
+  },
+  smallestException: {
+    fontSize: '12px',
+    fontWeight: '400',
     lineHeight: 1.25, // 125%
   },
 };
